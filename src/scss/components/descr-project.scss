@@ -24,6 +24,7 @@
   }
   &__wrapper {
     display: flex;
+    align-items: start;
     justify-content: space-between;
     margin-bottom: 120px;
     @include laptop {
@@ -179,6 +180,12 @@
       }
     }
   }
+  &__info-sublist {
+    list-style: disc;
+    padding-left: 30px;
+  }
+  &__info-sublist-item {
+  }
   &__info-row {
     display: flex;
     justify-content: space-between;
@@ -191,15 +198,12 @@
   }
   &__img {
     width: 575px;
-    height: 575px;
-    object-fit: cover;
+    height: auto;
     @include desktop {
       width: 555px;
-      height: 555px;
     }
     @include laptop {
       width: 100%;
-      height: 400px;
     }
   }
   &__item {
@@ -226,7 +230,6 @@
   &__item-img {
     max-width: calc(50% - 40px);
     width: 100%;
-    min-height: 335px;
     object-fit: cover;
     @include desktop {
       max-width: calc(50% - 30px);
@@ -235,7 +238,6 @@
     }
     @include laptop {
       max-width: calc(50% - 15px);
-      height: 435px;
     }
     @include tablet {
       max-width: none;
@@ -265,7 +267,7 @@
     @include desktop {
       &:not(:last-child) {
         margin-bottom: 35px;
-      } 
+      }
     }
   }
 }

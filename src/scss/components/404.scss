@@ -1,13 +1,16 @@
 .section-error {
   position: relative;
-  padding: 235px 0px;
-  background-color:var(--blue-light);
+  background-color: var(--blue-light);
   z-index: 1;
-  @include desktop {
-    padding: 180px 0px;
-  }
-  @include laptop {
-    padding: 140px 0px;
+  &__body {
+    position: relative;
+    padding: 235px 0px;
+    @include desktop {
+      padding: 180px 0px;
+    }
+    @include laptop {
+      padding: 140px 0px;
+    }
   }
   &__img {
     position: absolute;
@@ -27,6 +30,12 @@
     @include laptop {
       display: none;
     }
+  }
+  &__icon {
+    position: absolute;
+    width: 615px;
+    left: 0;
+    bottom: 0;
   }
   &__title {
     margin: 0px 0px 40px 0px;
