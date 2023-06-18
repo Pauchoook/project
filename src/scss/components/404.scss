@@ -1,0 +1,51 @@
+.section-error {
+  position: relative;
+  padding: 235px 0px;
+  background-color:var(--blue-light);
+  z-index: 1;
+  @include desktop {
+    padding: 180px 0px;
+  }
+  @include laptop {
+    padding: 140px 0px;
+  }
+  &__img {
+    position: absolute;
+    width: 960px;
+    height: 100%;
+    object-fit: cover;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    @media (max-width: 1799px) {
+      width: 800px;
+    }
+    @include desktop {
+      width: 650px;
+    }
+    @include laptop {
+      display: none;
+    }
+  }
+  &__title {
+    margin: 0px 0px 40px 0px;
+    @include tablet {
+      font-size: 56px;
+    }
+  }
+  &__content {
+    max-width: 575px;
+    margin: 0px 0px 120px 0px;
+    @include laptop {
+      margin-bottom: 80px;
+    }
+  }
+  &__btn {
+    display: inline-block;
+    text-align: center;
+    @include mobile {
+      width: 100%;
+    }
+  }
+}

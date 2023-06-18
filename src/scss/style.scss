@@ -1,0 +1,35 @@
+@import "./fonts";
+@import "./base/normalize";
+@import "./base/vars";
+@import "./base/templates";
+@import "./base/settings";
+@import "./base/config-container";
+@import "./base/classes";
+@import "./base/swiper";
+
+// ui
+@import "./ui/button";
+@import "./ui/list";
+@import "./ui/title";
+@import "./ui/text";
+@import "./ui/form";
+
+// mini-components
+@import "./mini-components/breadcrumbs";
+
+// components
+@import "./components/header";
+
+@import "./components/hero";
+@import "./components/program-support";
+@import "./components/contact-details";
+@import "./components/connection";
+@import "./components/hero-category";
+@import "./components/catalog";
+@import "./components/hero-lot";
+@import "./components/descr-project";
+@import "./components/variants-investment";
+@import "./components/indicators";
+@import "./components/404";
+
+@import "./components/footer";

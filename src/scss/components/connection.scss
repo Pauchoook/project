@@ -1,0 +1,110 @@
+.connection {
+  padding: 150px 0px;
+  background-color: var(--blue-light);
+  @include desktop {
+    padding: 130px 0px;
+  }
+  @include laptop {
+    padding: 110px 0px;
+  }
+  @include tablet {
+    padding: 90px 0px;
+  }
+  &__body {
+    @include flex-between;
+    padding: 64px 105px;
+    background-color: white;
+    @include desktop {
+      padding: 50px 85px;
+    }
+    @include laptop {
+      padding: 55px 25px;
+    }
+    @include tablet {
+      padding: 50px 20px;
+    }
+    @media (max-width: 576px) {
+      flex-direction: column;
+      align-items: start;
+      row-gap: 35px;
+    }
+  }
+  &__title {
+    max-width: 340px;
+    @include tablet {
+      max-width: 220px;
+    }
+  }
+  &__info {
+    max-width: 560px;
+    @include desktop {
+      max-width: 465px;
+    }
+  }
+  &__tel {
+    display: flex;
+    align-items: center;
+    column-gap: 24px;
+    font-family: "Halvar", sans-serif;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 120%;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    @include hover {
+      .connection__tel-icon {
+        transform: rotate(12deg);
+      }
+    }
+    @include desktop {
+      column-gap: 20px;
+      font-size: 22px;
+    }
+    @include laptop {
+      column-gap: 12px;
+    }
+    @include tablet {
+      column-gap: 8px;
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+    @media (max-width: 576px) {
+      transform: translateX(-5px);
+    }
+  }
+  &__tel-icon {
+    width: 60px;
+    height: 60px;
+    fill: var(--green);
+    transition: transform 0.2s ease;
+    @include laptop {
+      width: 40px;
+      height: 40px;
+    }
+    @include tablet {
+      width: 35px;
+      height: 35px;
+    }
+  }
+  &__content {
+    margin: 0;
+    font-size: 16px;
+    line-height: 150%;
+    padding-left: 87px;
+    span {
+      font-weight: 600;
+    }
+    @include desktop {
+      font-size: 15px;
+      padding-left: 82px;
+    }
+    @include laptop {
+      padding-left: 52px;
+      max-width: 260px;
+    }
+    @media (max-width: 576px) {
+      padding-left: 0;
+      max-width: none;
+    }
+  }
+}

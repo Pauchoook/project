@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="./img/logos/favicon.png">
+    <link rel="stylesheet" href="css/style.min.css?_v=20230618100755">
+    <title>Pauchok</title>
+</head>
+
+  <body>
+    <header class="header">
+  <div class="container header__container">
+    <a href="index.html" class="header__logo">
+      <img src="img/logos/logo.svg" alt="Логотип" class="header__logo-img" />
+    </a>
+    <nav class="header__nav" id="nav-burger">
+      <ul class="list header__nav-list">
+        <li>
+          <a href="category.html">Инвестлоты</a>
+        </li>
+        <li>
+          <a href="#contacts">Контакты</a>
+        </li>
+      </ul>
+      <a href="#contact-details" class="btn-primary header__btn-app">Оставить заявку</a>
+    </nav>
+    <button class="btn header__btn-burger" id="btn-burger">
+      <span class="header__btn-burger-line"></span>
+      <span class="header__btn-burger-line"></span>
+      <span class="header__btn-burger-line"></span>
+    </button>
+  </div>
+</header>
+
+
+    <main>
+      <section class="hero">
+  <div class="container">
+    <img src="img/pictures/hero.jpg" alt="Изображение" class="hero__img">
+    <img src="img/figures/circles.svg" class="hero__icon hero__icon--circles">
+    <img src="img/figures/plus.svg" class="hero__icon hero__icon--plus">
+    <img src="img/figures/circle.svg" class="hero__icon hero__icon--circle">
+    <img src="img/figures/oval.svg" class="hero__icon hero__icon--oval">
+    <img src="img/figures/triangles.svg" class="hero__icon hero__icon--triangles">
+    <h1 class="title title-1 text-white hero__title">
+      <!-- <span>Портфель</span> <span>инвестиционных</span> <span>проектов Мончегорска</span> -->
+      <span>Портфель <br> инвестиционных <br> проектов Мончегорска</span>
+    </h1>
+    <button class="btn btn-primary hero__btn">Инвестируй в мончегорске</button>
+  </div>
+</section>
+      <section class="program-support">
+  <img src="img/figures/rhomb.svg" class="program-support__icon">
+  <div class="container">
+    <div class="program-support__header">
+      <h4 class="title title-4 program-support__title">
+        ПРОГРАММА ПОДДЕРЖКИ ИНВЕСТИЦИОННЫХ ПРОЕКТОВ В МОНЧЕГОРСКЕ
+      </h4>
+      <a href="#" class="btn-primary program-support__btn">АРКТИЧЕСКИЙ ИНВЕСТОР</a>
+    </div>
+  </div>
+  <div class="program-support__body">
+    <div class="container">
+      <div class="program-support__body-wrapper">
+        <div class="program-support__card">
+          <img
+            src="img/pictures/inveslots.jpg"
+            alt="Изображение"
+            class="program-support__card-img"
+          />
+          <h3 class="title title-3 program-support__card-title">КРУПНЫЕ ИНВЕСТЛОТЫ</h3>
+          <a href="#" class="btn-primary program-support__card-btn">Подробнее</a>
+        </div>
+        <div class="program-support__card">
+          <img
+            src="img/pictures/inveslots.jpg"
+            alt="Изображение"
+            class="program-support__card-img"
+          />
+          <h3 class="title title-3 program-support__card-title">КРУПНЫЕ ИНВЕСТЛОТЫ</h3>
+          <a href="#" class="btn-primary program-support__card-btn">Подробнее</a>
+        </div>
+        <div class="program-support__card">
+          <img
+            src="img/pictures/inveslots.jpg"
+            alt="Изображение"
+            class="program-support__card-img"
+          />
+          <h3 class="title title-3 program-support__card-title">КРУПНЫЕ ИНВЕСТЛОТЫ</h3>
+          <a href="#" class="btn-primary program-support__card-btn">Подробнее</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <section class="contact-details" id="contact-details">
+  <img src="img/pictures/hero.jpg" alt="Изображение" class="contact-details__img" />
+  <img src="img/figures/wave.svg" class="contact-details__icon contact-details__icon--wave" />
+  <img src="img/figures/triangles-3.svg" class="contact-details__icon contact-details__icon--triangles" />
+  <div class="container">
+    <form action="#" class="form contact-details__form">
+      <h4 class="title title-4 contact-details__form-title">
+        Заинтересовал один из проектов? Оставьте ваши контактные данные
+      </h4>
+      <p for="#" class="form__content form__content--main"><span>*</span> Обязательные для заполнения поля</p>
+      <div class="form__item">
+        <label for="FIO" class="form__content form__content--title"><span>*</span> ФИО </label>
+        <input type="text" placeholder="ФИО" id="FIO" class="form__input" name="fio" />
+      </div>
+      <div class="form__item">
+        <label for="email" class="form__content form__content--title"><span>*</span> E-mail </label>
+        <input
+          type="email"
+          placeholder="ivanov@mail.com"
+          id="email"
+          name="email"
+          class="form__input"
+        />
+      </div>
+      <div class="form__item">
+        <label for="tel" class="form__content form__content--title"><span>*</span> Номер телефона </label>
+        <input
+          type="tel"
+          placeholder="+7 (___) ___ __ __"
+          id="tel"
+          name="telephone"
+          class="form__input"
+        />
+      </div>
+      <div class="form__item">
+        <label for="company" class="form__content form__content--title">Компания</label>
+        <input type="text" id="company" name="company" class="form__input" />
+      </div>
+      <div class="form__item">
+        <label for="lot" class="form__content form__content--title">Интересующий лот</label>
+        <input type="text" id="lot" name="lot" class="form__input" />
+      </div>
+      <div class="form__item">
+        <label for="skill" class="form__content form__content--title">Ваш опыт в предпринимательстве</label>
+        <textarea name="skill" id="skill" class="form__input text"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary form__btn contact-details__btn">Оставить заявку</button>
+      <p class="form__data-content">
+        Нажимая на кнопку отправить, вы даете
+        <a href="#">согласие на обработку персональных данных</a>
+      </p>
+    </form>
+  </div>
+</section>
+
+      <section class="connection" id="contacts">
+  <div class="container">
+    <div class="connection__body">
+      <h3 class="title title-3 connection__title">Остались вопросы? Свяжитесь с нами</h3>
+      <div class="connection__info">
+        <a href="tel:+79211701888" class="connection__tel">
+          <svg class="connection__tel-icon">
+            <use xlink:href="img/icons/icons.svg#icon-tel"></use>
+          </svg>
+          +7 (921) 170-18-88
+        </a>
+        <p class="connection__content">
+          <span>Александр Поленков</span>, руководитель направления «Бизнес» АНО «Агентство развития Мончегорска»
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+    </main>
+
+    <footer class="footer">
+  <div class="container">
+    <div class="footer__top">
+      <div class="footer__item">
+        <span class="footer__item-title">Организатор</span>
+        <a href="#" class="footer__item-btn">Агентство развития Мончегорска</a>
+      </div>
+      <div class="footer__item">
+        <span class="footer__item-title">Направление</span>
+        <a href="#" class="footer__item-btn">Бизнес</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+        <p class="footer__bottom-content">© Агентство развития Мончегорска, 2023</p>
+        <p class="footer__bottom-content">Политика конфиденциальности</p>
+    </div>
+  </div>
+</footer>
+
+    <script src="js/app.min.js?_v=20230618100755"></script>
+  </body>
+</html>

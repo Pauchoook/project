@@ -1,0 +1,106 @@
+.catalog {
+  padding: 150px 0px;
+  background-color: var(--blue-light);
+  @include desktop {
+    padding: 130px 0px;
+  }
+  @include laptop {
+    padding: 110px 0px;
+  }
+  @include tablet {
+    padding: 90px 0px;
+  }
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-wrap: wrap;
+    row-gap: 80px;
+    @include desktop {
+      row-gap: 60px;
+    }
+    @include laptop {
+      row-gap: 35px;
+    }
+    @include tablet {
+      row-gap: 24px;
+    }
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 calc(50% - 40px);
+    color: var(--dark);
+    @include hover {
+      .catalog__item-icon {
+        transform: translateX(7px);
+      }
+    }
+    @include desktop {
+      flex-basis: calc(50% - 30px);
+    }
+    @include laptop {
+      flex-basis: calc(50% - 15px);
+    }
+    @include tablet {
+      flex-basis: calc(50% - 8px);
+    }
+  }
+  &__item-img {
+    display: block;
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    @include laptop {
+      height: 180px;
+    }
+  }
+  &__item-body {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    padding: 24px 40px;
+    background-color: white;
+    @include desktop {
+      padding: 20px 35px;
+    }
+    @include laptop {
+      padding: 20px;
+    }
+    @include tablet {
+      display: block;
+      padding: 16px 12px;
+    }
+  }
+  &__item-title {
+    max-width: 400px;
+    @include desktop {
+      max-width: 335px;
+    }
+    @include laptop {
+      max-width: 225px;
+      font-size: 22px;
+      line-height: 120%;
+    }
+    @include tablet {
+      max-width: none;
+      font-size: 15px;
+      margin-bottom: 12px;
+    }
+  }
+  &__item-icon {
+    width: 70px;
+    height: 45px;
+    color: inherit;
+    fill: currentColor;
+    transition: transform 0.2s ease;
+    @include laptop {
+      width: 40px;
+      height: 25px;
+    }
+    @include tablet {
+      display: block;
+      margin-left: auto;
+    }
+  }
+}

@@ -1,0 +1,90 @@
+.form {
+  &__item {
+    width: 100%;
+    margin-bottom: 24px;
+    @include desktop {
+      margin-bottom: 20px;
+    }
+  }
+  &__input {
+    width: 100%;
+    border: 2px solid var(--gray-dark);
+    border-radius: 0;
+    padding: 18px 24px;
+    font-size: 16px;
+    line-height: 150%;
+    color: var(--dark);
+    outline: none;
+    &.text {
+      resize: none;
+      height: 90px;
+    }
+    &::placeholder {
+      color: var(--gray-dark);
+      font-size: inherit;
+    }
+    @include desktop {
+      padding: 15px 24px;
+      font-size: 15px;
+    }
+    @include tablet {
+      padding: 15px 20px;
+    }
+  }
+  &__content {
+    display: block;
+    font-size: 13px;
+    line-height: 130%;
+    color: var(--dark);
+    span {
+      color: var(--red-dark);
+    }
+    &--main {
+      margin: 0px 0px 24px 0px;
+    }
+    &--title {
+      margin: 0px 0px 8px 0px;
+    }
+    @include desktop {
+      font-size: 12px;
+      line-height: 110%;
+      &--main {
+        margin-bottom: 20px;
+      }
+      &--title {
+        margin-bottom: 8px;
+      }
+    }
+  }
+  &__btn {
+    font-size: 20px;
+    line-height: 25px;
+    padding: 20px 50px;
+    margin-bottom: 18px;
+    @include desktop {
+      padding: 16px 50px;
+      font-size: 18px;
+      line-height: 25px;
+    }
+    @include tablet {
+      font-size: 16px;
+      line-height: 120%;
+    }
+    @include mobile {
+      width: 100%;
+    }
+  }
+  &__data-content {
+    max-width: 300px;
+    font-size: 13px;
+    line-height: 130%;
+    a {
+      text-decoration: underline;
+    }
+    @include desktop {
+      max-width: 275px;
+      font-size: 12px;
+      line-height: 140%;
+    }
+  }
+}

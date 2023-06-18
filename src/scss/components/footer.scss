@@ -1,0 +1,104 @@
+.footer {
+  padding: 65px 0px 35px 0px;
+  background-color: var(--dark);
+  color: var(--gray);
+  @include laptop {
+    padding: 60px 0px 20px 0px;
+  }
+  @include tablet {
+    padding-top: 40px;
+  }
+  &__top {
+    display: flex;
+    align-items: center;
+    column-gap: 90px;
+    margin-bottom: 50px;
+    @include desktop {
+      column-gap: 50px;
+    }
+    @include laptop {
+      column-gap: 20px;
+      margin-bottom: 30px;
+    }
+    @include tablet {
+      flex-wrap: wrap;
+      row-gap: 25px;
+    }
+  }
+  &__item {
+    flex: 0 1 323px;
+    @include desktop {
+      flex-basis: 350px;
+    }
+    @include laptop {
+      flex-basis: 330px;
+    }
+  }
+  &__item-title {
+    display: block;
+    font-size: 16px;
+    line-height: 150%;
+    margin-bottom: 5px;
+    @include desktop {
+      font-size: 15px;
+    }
+    @include laptop {
+      margin-bottom: 0;
+    }
+  }
+  &__item-btn {
+    font-family: "Halvar", sans-serif;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 35px;
+    text-decoration: underline;
+    transition: color 0.2s ease;
+    @include hover {
+      color: var(--gray-dark);
+    }
+    @include laptop {
+      font-size: 20px;
+      line-height: 25px;
+    }
+    @include laptop {
+      font-size: 18px;
+    }
+  }
+  &__bottom {
+    display: flex;
+    column-gap: 90px;
+    @include desktop {
+      column-gap: 50px;
+    }
+    @include laptop {
+      column-gap: 20px;
+    }
+    @include tablet {
+      flex-wrap: wrap;
+      row-gap: 5px;
+    }
+  }
+  &__bottom-content {
+    font-family: "Calibri", sans-serif;
+    flex: 0 1 323px;
+    margin: 0;
+    font-size: 16px;
+    line-height: 150%;
+    color: var(--gray-dark);
+    @include desktop {
+      flex-basis: 350px;
+      font-weight: 300;
+      font-size: 20px;
+      line-height: 28px;
+    }
+    @include laptop {
+      flex-basis: 330px;
+      font-size: 16px;
+      line-height: 150%;
+    }
+    @include tablet {
+      flex-basis: auto;
+      font-size: 15px;
+    }
+  }
+}

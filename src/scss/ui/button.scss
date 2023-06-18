@@ -1,0 +1,36 @@
+.btn {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  color: inherit;
+}
+
+.btn-primary {
+  font-family: "Halvar", sans-serif;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 120%;
+  letter-spacing: 0.01em;
+  color: white;
+  text-transform: uppercase;
+
+  padding: 22px;
+  background-color: var(--dark);
+  border: 1px solid var(--dark);
+  transition: color 0.2s ease, background-color 0.2s ease;
+  @include hover {
+    background-color: transparent;
+    color: var(--dark);
+  }
+  @include desktop {
+    font-size: 24px;
+  }
+  @include laptop {
+    font-size: 20px;
+  }
+  @include tablet {
+    font-size: 16px;
+  }
+}

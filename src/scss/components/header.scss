@@ -1,0 +1,181 @@
+.header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  font-family: "Halvar", sans-serif;
+  padding: 16px 0px;
+  background-color: white;
+  z-index: 110;
+  @include tablet {
+    padding: 12px 0px;
+  }
+  &__container {
+    @include flex-between;
+  }
+  &__logo {
+    width: 180px;
+    @include tablet {
+      width: 110px;
+    }
+  }
+  &__logo-img {
+    width: 100%;
+    height: auto;
+  }
+  &__nav-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: var(--dark);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+    z-index: 90;
+    &.active {
+      opacity: 0.3;
+      visibility: visible;
+    }
+  }
+  &__nav {
+    display: flex;
+    align-items: center;
+    column-gap: 40px;
+    @include laptop {
+      position: fixed;
+      overflow-y: auto;
+      flex-direction: column;
+      align-items: start;
+      row-gap: 35px;
+      background-color: var(--gray);
+      padding: 80px 40px;
+      overflow-y: auto;
+      left: 0;
+      right: 0;
+      top: 84px;
+      transform: translateX(-100vw);
+      opacity: 0;
+      z-index: -1;
+      transition: transform 0.5s ease, opacity 0.5s ease;
+      &.open {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+    @include tablet {
+      top: 57px;
+      padding: 70px 20px;
+    }
+  }
+  &__nav-list {
+    display: flex;
+    column-gap: 40px;
+    a {
+      position: relative;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 100%;
+      letter-spacing: 0.01em;
+      text-transform: uppercase;
+      &::before {
+        position: absolute;
+        content: "";
+        left: 0;
+        right: 100%;
+        height: 2px;
+        bottom: -2px;
+        background-color: black;
+        transition: right 0.3s ease;
+      }
+      @include hover {
+        &::before {
+          right: 0;
+        }
+      }
+    }
+    @include desktop {
+      a {
+        font-size: 18px;
+      }
+    }
+    @include laptop {
+      flex-direction: column;
+      row-gap: 35px;
+      a {
+        font-size: 26px;
+        line-height: 120%;
+      }
+    }
+  }
+  &__btn-app {
+    display: block;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    font-size: 20px;
+    line-height: 100%;
+    @include desktop {
+      font-size: 18px;
+    }
+    @include laptop {
+      padding: 24px;
+      font-size: 24px;
+      line-height: 120%;
+    }
+    @include tablet {
+      font-size: 16px;
+    }
+    @media (max-width: 479px) {
+      text-align: center;
+      width: 100%;
+    }
+  }
+  &__btn-burger {
+    position: relative;
+    overflow: hidden;
+    width: 55px;
+    height: 20px;
+    display: none;
+    &.active {
+      @include flex-center;
+      .header__btn-burger-line {
+        &:first-child {
+          width: 25px;
+          transform: rotate(45deg);
+          top: calc(50% - 2px);
+          left: calc(50% - 12px);
+        }
+        &:nth-child(2) {
+          right: 100%;
+        }
+        &:last-child {
+          width: 25px;
+          transform: rotate(-45deg);
+          bottom: calc(50% - 2px);
+          left: calc(50% - 12px);
+        }
+      }
+    }
+    @include laptop {
+      display: block;
+    }
+    @include tablet {
+      width: 40px;
+    }
+  }
+  &__btn-burger-line {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background-color: black;
+    transition: right 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
+    &:first-child {
+      top: 0;
+    }
+    &:nth-child(2) {
+      top: calc(50% - 2px);
+    }
+    &:last-child {
+      bottom: 0;
+    }
+  }
+}

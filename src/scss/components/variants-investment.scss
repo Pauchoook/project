@@ -1,0 +1,40 @@
+.variants-investment {
+  padding-bottom: 120px;
+  @include laptop {
+    padding-bottom: 100px;
+  }
+  @include tablet {
+    padding-bottom: 90px;
+  }
+  &__title {
+    margin-bottom: 40px;
+    @include laptop {
+      margin-bottom: 30px;
+    }
+    @include tablet {
+      margin-bottom: 25px;
+    }
+  }
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    @include laptop {
+      flex-direction: column;
+      row-gap: 30px;
+    }
+    @include mobile {
+      row-gap: 15px;
+    }
+  }
+  &__img {
+    --offset: 40px;
+    width: calc(50% - var(--offset));
+    height: auto;
+    @include desktop {
+      --offset: 30px;
+    }
+    @include laptop {
+      width: 100%;
+    }
+  }
+}

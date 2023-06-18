@@ -1,0 +1,59 @@
+.text-white {
+  line-height: 139%;
+  span {
+    background-color: white;
+    color: var(--dark); 
+    display: inline;
+    padding: 12px 24px;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+  }
+  @include desktop {
+    line-height: 138%;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+  @include laptop {
+    line-height: 137%;
+    span {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+  }
+  @include tablet {
+    line-height: 130%;
+    span {
+      padding: 5px 8px;
+    }
+  }
+}
+
+.text-green {
+  line-height: 139%;
+  span {
+    background-color: var(--green);
+    color: var(--dark); 
+    display: inline;
+    padding: 12px 24px;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+  }
+  @include desktop {
+    line-height: 138%;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+  @include laptop {
+    line-height: 137%;
+    span {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+  }
+  @include tablet {
+    line-height: 130%;
+    span {
+      padding: 5px 8px;
+    }
+  }
+}

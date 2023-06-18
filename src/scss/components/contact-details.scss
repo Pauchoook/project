@@ -1,0 +1,102 @@
+.contact-details {
+  position: relative;
+  padding: 64px 0px;
+  @include laptop {
+    padding: 0px 0px 75px 0px;
+  }
+  @include mobile {
+    padding-bottom: 65px;
+  }
+  &__icon {
+    position: absolute;
+    height: auto;
+    &--triangles {
+      width: 255px;
+      bottom: 0;
+      right: 295px;
+    }
+    &--wave {
+      width: 390px;
+      top: -23px;
+      left: 450px;
+    }
+    @media (max-width: 1799px) {
+      &--triangles {
+        right: 55px;
+      }
+    }
+    @include desktop {
+      &--wave {
+        width: 330px;
+        left: 200px;
+        top: -20px;
+      }
+      &--triangles {
+        width: 190px;
+      }
+    }
+    @include laptop {
+      &--wave {
+        left: auto;
+        right: 0;
+      }
+      &--triangles {
+        right: 0;
+      }
+    }
+    @include mobile {
+      &--wave {
+        width: 200px;
+        top: -12px;
+      }
+      &--triangles {
+        width: 95px;
+      }
+    }
+  }
+  &__img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 920px;
+    height: 100%;
+    object-fit: cover;
+    @media (max-width: 1799px) {
+      width: 740px;
+    }
+    @include desktop {
+      width: 635px;
+    }
+    @include laptop {
+      position: static;
+      width: 100%;
+      height: 360px;
+      margin-bottom: 75px;
+    }
+    @include mobile {
+      height: 430px;
+      margin-bottom: 30px;
+    }
+  }
+  &__form {
+    display: block;
+    max-width: 575px;
+    margin-left: auto;
+    @include desktop {
+      max-width: 555px;
+    }
+    @include laptop {
+      max-width: none;
+    }
+  }
+  &__form-title {
+    max-width: 370px;
+    margin-bottom: 30px;
+    @include laptop {
+      max-width: 270px;
+      margin-bottom: 24px;
+    }
+  }
+  &__btn {
+  }
+}

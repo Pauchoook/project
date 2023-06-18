@@ -1,0 +1,271 @@
+.descr-project {
+  padding: 120px 0px;
+  @include desktop {
+    padding: 110px 0px;
+  }
+  @include laptop {
+    padding: 90px 0px;
+    margin: 0 !important;
+  }
+  @include tablet {
+    padding: 70px 0px;
+  }
+  &__title {
+    margin-bottom: 40px;
+    @include desktop {
+      margin-bottom: 35px;
+    }
+    @include laptop {
+      margin-bottom: 25px;
+    }
+    @include tablet {
+      margin-bottom: 25px;
+    }
+  }
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 120px;
+    @include laptop {
+      display: block;
+      margin-bottom: 110px;
+    }
+    @include tablet {
+      margin-bottom: 90px;
+    }
+  }
+  @include laptop {
+    margin-bottom: 110px;
+  }
+  &__info-left {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    max-width: 575px;
+    @include desktop {
+      max-width: 555px;
+    }
+    @include laptop {
+      row-gap: 25px;
+      margin-bottom: 35px;
+    }
+    @include tablet {
+      row-gap: 15px;
+      max-width: none;
+    }
+  }
+  &__list {
+  }
+  &__list-item {
+    display: flex;
+    column-gap: 5px;
+    &:not(:last-child) {
+      margin-bottom: 50px;
+    }
+    @include tablet {
+      &:not(:last-child) {
+        margin-bottom: 25px;
+      }
+    }
+  }
+  &__list-parent-icon {
+    @include flex-center;
+    position: relative;
+    width: 60px;
+    height: 60px;
+    z-index: 1;
+    &::before {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 50%;
+      background-color: var(--green);
+      z-index: -1;
+    }
+    @include desktop {
+      width: 55px;
+      height: 55px;
+    }
+    @include tablet {
+      width: 40px;
+      height: 40px;
+    }
+  }
+  &__list-icon {
+    width: 40px;
+    height: 40px;
+    @include laptop {
+      width: 35px;
+      height: 35px;
+    }
+    @include tablet {
+      width: 25px;
+      height: 25px;
+    }
+  }
+  &__info {
+    --offset: 65px;
+    max-width: calc(100% - var(--offset));
+    @include desktop {
+      --offset: 55px;
+    }
+    @include tablet {
+      --offset: 40px;
+    }
+  }
+  &__info-item {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+    @include desktop {
+      &:not(:last-child) {
+        margin-bottom: 25px;
+      }
+    }
+    @include tablet {
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
+    }
+  }
+  &__info-title {
+    margin-bottom: 5px;
+  }
+  &__text {
+    margin: 0;
+    font-size: 20px;
+    line-height: 140%;
+    span {
+      font-weight: 600;
+    }
+    @include desktop {
+      font-size: 18px;
+    }
+    @include tablet {
+      font-size: 15px;
+      line-height: 150%;
+    }
+  }
+  &__info-list-item {
+    position: relative;
+    padding-left: 18px;
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
+    &::before {
+      position: absolute;
+      content: "";
+      width: 8px;
+      height: 8px;
+      background-color: black;
+      left: 0;
+      top: 10px;
+    }
+    @include desktop {
+      &:not(:last-child) {
+        margin-bottom: 6px;
+      }
+      &::before {
+        top: 8px;
+      }
+    }
+    @include tablet {
+      padding-left: 16px;
+      &::before {
+        width: 6px;
+        height: 6px;
+      }
+    }
+  }
+  &__info-row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    @include laptop {
+      justify-content: start;
+      column-gap: 25px;
+    }
+  }
+  &__img {
+    width: 575px;
+    height: 575px;
+    object-fit: cover;
+    @include desktop {
+      width: 555px;
+      height: 555px;
+    }
+    @include laptop {
+      width: 100%;
+      height: 400px;
+    }
+  }
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    &:not(:last-child) {
+      margin-bottom: 120px;
+    }
+    @include laptop {
+      &:not(:last-child) {
+        margin-bottom: 110px;
+      }
+    }
+    @include tablet {
+      flex-direction: column-reverse;
+      align-items: start;
+      row-gap: 35px;
+      &:not(:last-child) {
+        margin-bottom: 90px;
+      }
+    }
+  }
+  &__item-img {
+    max-width: calc(50% - 40px);
+    width: 100%;
+    min-height: 335px;
+    object-fit: cover;
+    @include desktop {
+      max-width: calc(50% - 30px);
+      min-height: auto;
+      height: 335px;
+    }
+    @include laptop {
+      max-width: calc(50% - 15px);
+      height: 435px;
+    }
+    @include tablet {
+      max-width: none;
+      width: 100%;
+      height: auto;
+    }
+  }
+  &__item-info {
+    flex: 0 1 calc(50% - 40px);
+    @include desktop {
+      flex-basis: calc(50% - 30px);
+    }
+    @include laptop {
+      flex-basis: calc(50% - 15px);
+    }
+    @include tablet {
+      flex: 1;
+    }
+  }
+  &__item-info-block {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    &:not(:last-child) {
+      margin-bottom: 50px;
+    }
+    @include desktop {
+      &:not(:last-child) {
+        margin-bottom: 35px;
+      } 
+    }
+  }
+}

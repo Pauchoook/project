@@ -1,0 +1,139 @@
+.hero {
+  position: relative;
+  min-height: 100vh;
+  padding: 230px 0px 200px 0px;
+  background-color: var(--green);
+  z-index: 2;
+  @include desktop {
+    padding: 200px 0px 160px 0px;
+  }
+  @include laptop {
+    padding-top: 280px;
+  }
+  @include tablet {
+    padding: 430px 0px 100px 0px;
+  }
+  &__icon {
+    position: absolute;
+    height: auto;
+    z-index: -1;
+    &--circles {
+      width: 200px;
+      top: 27px;
+      right: 460px;
+    }
+    &--plus {
+      width: 80px;
+      top: 200px;
+      right: 49%;
+    }
+    &--circle {
+      width: 130px;
+      top: 360px;
+      right: 320px;
+    }
+    &--oval {
+      width: 60px;
+      left: 160px;
+      bottom: 330px;
+    }
+    &--triangles {
+      width: 395px;
+      bottom: 0;
+      left: 145px;
+    }
+    @include desktop {
+      &--circles {
+        width: 150px;
+        right: 220px;
+      }
+      &--plus {
+        width: 60px;
+        right: calc(50vw - 28px);
+      }
+      &--oval {
+        display: none;
+      }
+      &--circle {
+        width: 100px;
+        top: auto;
+        right: 70px;
+        bottom: 160px;
+      }
+      &--triangles {
+        width: 300px;
+        left: 25px;
+      }
+    }
+    @include laptop {
+      &--circles {
+        right: 75px;
+      }
+      &--plus {
+        top: 150px;
+        right: auto;
+        left: 0;
+      }
+      &--circle {
+        display: none;
+      }
+      &--triangles {
+        left: -55px;
+      }
+    }
+    @include tablet {
+      &--circles {
+        width: 95px;
+        top: 25px;
+        right: 40px;
+      }
+      &--plus {
+        display: none;
+      }
+      &--triangles {
+        width: 215px;
+        left: -50px;
+      }
+    }
+  }
+  &__img {
+    position: absolute;
+    width: 960px;
+    height: 100%;
+    object-fit: cover;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    @include desktop {
+      width: 685px;
+    }
+    @include laptop {
+      width: 50vw;
+    }
+    @include tablet {
+      width: 100vw;
+      height: 415px;
+      top: 57px;
+    }
+  }
+  &__title {
+    max-width: 865px;
+    margin-bottom: 55px;
+    @include desktop {
+      max-width: 790px;
+      margin-bottom: 50px;
+    }
+    @include laptop {
+      max-width: 595px;
+    }
+    @include tablet {
+      max-width: 335px;
+      margin-bottom: 35px;
+    }
+  }
+  &__btn {
+    @include mobile {
+      width: 100%;
+    }
+  }
+}

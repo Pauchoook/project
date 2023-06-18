@@ -1,0 +1,195 @@
+.hero-lot {
+  position: relative;
+  padding: 125px 0px 160px 0px;
+  background-color: #ebf6f8;
+  z-index: 1;
+  @include laptop {
+    padding: 120px 0px 100px 0px;
+    min-height: 700px;
+  }
+  @include tablet {
+    overflow: hidden;
+    padding-bottom: 123px;
+    &::after {
+      position: absolute;
+      content: "";
+      height: 23px;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: white;
+      z-index: -1;
+    }
+  }
+  @include mobile {
+    padding-top: 95px;
+    min-height: 503px;
+  }
+  &__icon {
+    position: absolute;
+    z-index: 1000;
+    &--cross {
+      width: 255px;
+      bottom: 0;
+      right: 46%;
+    }
+    &--circle {
+      width: 200px;
+      top: -50px;
+      right: 220px;
+    }
+    @include desktop {
+      &--cross {
+        right: 48%;
+      }
+      &--circle {
+        right: 95px;
+      }
+    }
+    @include laptop {
+      &--cross {
+        width: 210px;
+        left: -50px;
+      }
+      &--circle {
+        width: 170px;
+        top: -60px;
+        right: -60px;
+      }
+    }
+    @include tablet {
+      &--cross {
+        width: 180px;
+        left: -75px;
+        bottom: 23px;
+      }
+      &--circle {
+        width: 120px;
+        top: 24px;
+        right: -60px;
+      }
+    }
+  }
+  &__breadcrumbs {
+    margin-bottom: 100px;
+    li {
+      opacity: 0.3;
+    }
+    @include laptop {
+      margin-bottom: 35px;
+    }
+    @include tablet {
+      margin-bottom: 40px;
+    }
+  }
+  &__title {
+    position: relative;
+    max-width: 595px;
+    @include desktop {
+      max-width: 570px;
+      font-size: 60px;
+      line-height: 68px;
+    }
+    @include laptop {
+      font-size: 56px;
+      line-height: 138%;
+    }
+    @include tablet {
+      font-size: 36px;
+      line-height: 130%;
+      z-index: 50;
+    }
+  }
+  &__slider-wrapper {
+    position: absolute;
+    width: 920px;
+    height: calc(100% - 84px);
+    right: 0;
+    top: 84px;
+    @media (max-width: 1819px) {
+      width: 685px;
+    }
+    @include laptop {
+      width: 100%;
+      top: auto;
+      bottom: 0;
+      height: 400px;
+      z-index: -1;
+    }
+    @include tablet {
+      bottom: 23px;
+    }
+    @include mobile {
+      height: 220px;
+    }
+  }
+  &__slider {
+    width: 100%;
+    height: 100%;
+  }
+  &__slide-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  &__slider-btn {
+    @include flex-center;
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(20px);
+    top: calc(50% - 12px);
+    z-index: 10;
+    transition: background-color 0.2s ease;
+    z-index: 10;
+    @include hover {
+      background-color: var(--gray-dark);
+    }
+    &--prev {
+      left: 20px;
+    }
+    &--next {
+      right: 20px;
+      transform: rotate(180deg);
+    }
+    @include laptop {
+      display: none;
+    }
+  }
+  &__slider-btn-icon {
+    width: 7px;
+    height: 12px;
+    fill: var(--darl);
+  }
+  &__slider-pagination {
+    @include flex-center;
+    position: absolute;
+    column-gap: 20px;
+    width: 920px;
+    bottom: -23px;
+    right: 0;
+    .swiper-pagination-bullet {
+      cursor: pointer;
+      width: 8px;
+      height: 8px;
+      background-color: var(--green);
+      transition: background-color 0.2s ease;
+      @include hover {
+        background-color: var(--dark);
+      }
+    }
+    .swiper-pagination-bullet-active {
+      background-color: var(--dark);
+    }
+    @media (max-width: 1819px) {
+      width: 685px;
+    }
+    @include laptop {
+      width: 100%;
+    }
+    @include tablet {
+      bottom: 0;
+    }
+  }
+}
